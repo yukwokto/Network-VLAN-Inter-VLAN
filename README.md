@@ -3,7 +3,7 @@
 This project demonstrates the configuration of VLANs and Inter-VLAN routing using Cisco Packet Tracer. The network consists of three units in a bookshop: Sales, Admin, and Customer, each having its own VLAN. Inter-VLAN routing is achieved through the "Router on a Stick" configuration. Below are the steps to set up the network:
 
 ## Network Topology
-![Network Topology](/pictures/NetworkTopology.png)
+![Network Topology](https://github.com/yukwokto/Network-VLAN-Inter-VLAN/blob/cdf7ff7a580be85d3bf39301123e11878d6fadcd/pictures/Network_Topology.png)
 
 ### Initial Configuration
 
