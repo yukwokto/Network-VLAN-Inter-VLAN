@@ -34,8 +34,27 @@ interface <port connecting 2 switches/ Router>
 switchport mode trunk
 ```
 
+Step 2: Configure VLAN Trunking Protocol on the Core Switch
+```
+Core-Switch(config)#vtp domain Ottawa_Bookshop
+Core-Switch(config)#vtp mode server
+Core-Switch(config)#vlan 10
+Core-Switch(config-vlan)#name Sales
+Core-Switch(config-vlan)#vlan 20
+Core-Switch(config-vlan)#name Admin
+Core-Switch(config-vlan)#vlan 30
+Core-Switch(config-vlan)#name Customer
+```
 
-
+Verification the configuration using the following commands:
+```
+show vtp status
+```
+![show vtp status]()
+```
+show vlan brief
+```
+![show vlan brief]()
 
 
 
