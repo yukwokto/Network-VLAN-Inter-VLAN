@@ -59,11 +59,58 @@ show vlan brief
 ![show vlan brief](https://github.com/yukwokto/Network-VLAN-Inter-VLAN/blob/7fa8b59b8b3f03c0f4321e3e91e9f5a4d003cb2d/pictures/Core-Switch_sh_vlan_brief.png)
 
 
+Step 3: Configure Access Ports on L1/L2/L3 Switches According to Their VLANs
 
+```
+L1/2/3-Switch(config)#int f0/1
+L1/2/3-Switch(config-if)#switchport mode access 
+L1/2/3-Switch(config-if)#switchport access vlan 10
 
+L1/2/3-Switch(config)#int f0/2
+L1/2/3-Switch(config-if)#switchport mode access
+L1/2/3-Switch(config-if)#switchport access vlan 20
 
+L1/2/3-Switch(config-if)#int f0/3
+L1/2/3-Switch(config-if)#switchport mode access
+L1/2/3-Switch(config-if)#switchport access vlan 30
+```
 
+Step 4: Configure Inter-VLAN Routing (Router on a Stick)
 
+```
+Router(config-if)#interface g0/0/0.10
+Router(config-subif)#encapsulation dot1Q 10
+Router(config-subif)#ip address 10.10.10.5 255.255.255.0
+
+Router(config-subif)#int g0/0/0.20
+Router(config-subif)#encapsulation dot1Q 20
+Router(config-subif)#ip address 10.10.20.5 255.255.255.0
+
+Router(config-subif)#int g0/0/0.30
+Router(config-subif)#encapsulation dot1Q 30
+Router(config-subif)#ip address 10.10.30.5 255.255.255.0
+```
+
+Step 5: Verify the connectivity between different VLANs
+
+- Verify the connectivity between the Sales and Admin Unit
+```
+Sales-1> ping 10.10.20.1
+```
+![Sales-1> ping 10.10.20.1]()
+
+- Verify the connectivity between the Sales and Customer Unit
+
+```
+Sales-1> ping 10.10.30.1
+```
+![Sales-1> ping 10.10.30.1]()
+
+- Verify the connectivity between Admin and Customer Unit
+```
+Admin-1> ping 10.10.30.1
+```
+![Admin-1> ping 10.10.30.1]()
 
 
 
