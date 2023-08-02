@@ -8,23 +8,45 @@ This project demonstrates the configuration of VLANs and Inter-VLAN routing usin
 ### Initial Configuration
 
 IP Address:
-
-- Sales-1		  10.10.10.1/24
-- Admin-1		  10.10.20.1/24
-- Customer-1	10.10.30.1/24
-
-- Sales-2		  10.10.10.2/24
-- Admin-2		  10.10.20.2/24
-- Customer-2	10.10.30.2/24
-
-- Sales-3		  10.10.10.3/24
-- Admin-3		  10.10.20.3/24
-- Customer-3	10.10.30.3/24
+```
+Sales-1	to 3     10.10.10.1, 2, 3/24
+Admin-1	to 3     10.10.20.1, 2, 3/24
+Customer-1 to 3  10.10.30.1 ,2 ,3/24
+```
 
 Default Gateway
+```
+Sales:     10.10.10.5
+Admin:     10.10.20.5
+Customer:  10.10.30.5
+```
 
-- Sales:		  10.10.10.5
-- Admin: 		  10.10.20.5
-- Customer:   10.10.30.5
+### Configuration Steps
+
+Step 1: Enable Trunk Ports on L1/L2/L3/Core Switch
+
+1. Connect to the switches or router through Cisco Packet Tracer's CLI.
+2. Enter the following commands for each interface connecting two switches or the router in global configuration mode:
+```
+en
+conf t
+interface <port connecting 2 switches/ Router>
+switchport mode trunk
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
