@@ -97,25 +97,22 @@ Step 5: Verify the connectivity between different VLANs
 ```
 Sales-1> ping 10.10.20.1
 ```
-![Sales-1> ping 10.10.20.1]()
+![Sales-1> ping 10.10.20.1](https://github.com/yukwokto/Network-VLAN-Inter-VLAN/blob/c2956864a3adbcc4f0961aa9cda25cb93fe941f4/pictures/ping1.png)
 
 - Verify the connectivity between the Sales and Customer Unit
 
 ```
 Sales-1> ping 10.10.30.1
 ```
-![Sales-1> ping 10.10.30.1]()
+![Sales-1> ping 10.10.30.1](https://github.com/yukwokto/Network-VLAN-Inter-VLAN/blob/c2956864a3adbcc4f0961aa9cda25cb93fe941f4/pictures/ping2.png)
 
 - Verify the connectivity between Admin and Customer Unit
 ```
 Admin-1> ping 10.10.30.1
 ```
-![Admin-1> ping 10.10.30.1]()
+![Admin-1> ping 10.10.30.1](https://github.com/yukwokto/Network-VLAN-Inter-VLAN/blob/c2956864a3adbcc4f0961aa9cda25cb93fe941f4/pictures/ping3.png)
 
 
+In conclusion, this network project successfully demonstrates the implementation of VLANs and Inter-VLAN routing using Cisco Packet Tracer. By segmenting the network into separate virtual LANs, I efficiently organized the departments—Sales, Admin, and Customer—enhancing security, manageability, and performance. The use of the "Router on a Stick" approach enabled communication between VLANs, allowing efficient data transfer across different departments. 
 
-
-
-
-
-
+Through this project, I have showcased our ability to design and configure complex networking solutions, which are crucial in real-world scenarios to optimize network performance and ensure data security. This hands-on experience has undoubtedly honed our networking skills, enabling me to tackle more intricate networking challenges in the future.
