@@ -50,11 +50,12 @@ Verification the configuration using the following commands:
 ```
 show vtp status
 ```
-![show vtp status]()
+![show vtp status](https://github.com/yukwokto/Network-VLAN-Inter-VLAN/blob/7fa8b59b8b3f03c0f4321e3e91e9f5a4d003cb2d/pictures/Core-Switch_sh_vtp_status.png)
 ```
 show vlan brief
 ```
-![show vlan brief]()
+![show vlan brief](https://github.com/yukwokto/Network-VLAN-Inter-VLAN/blob/7fa8b59b8b3f03c0f4321e3e91e9f5a4d003cb2d/pictures/Core-Switch_sh_vlan_brief.png)
+
 
 
 
