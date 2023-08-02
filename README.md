@@ -46,11 +46,13 @@ Core-Switch(config-vlan)#vlan 30
 Core-Switch(config-vlan)#name Customer
 ```
 
-Verification the configuration using the following commands:
+Verify correct vlan domain, mode, and password have been configured:
 ```
 show vtp status
 ```
-![show vtp status](https://github.com/yukwokto/Network-VLAN-Inter-VLAN/blob/7fa8b59b8b3f03c0f4321e3e91e9f5a4d003cb2d/pictures/Core-Switch_sh_vtp_status.png)
+![show vtp status](https://github.com/yukwokto/Network-VLAN-Inter-VLAN/blob/fecc81277ac303a86357acdc3e71a4e7dbe63604/pictures/Core-Switch_sh_vtp_status.png)
+
+Verify correct vlan have been configured:
 ```
 show vlan brief
 ```
